@@ -169,14 +169,27 @@
         margin-right: -3px;
         margin-left: 3px;
       }
+      #aside__section-talks {
+        display: none;
+      }
+
+      @page {
+        margin: 0;
+      }
 
       @media print {
         body {
-          zoom: 75%;
+          zoom: 80%;
         }
         #section-open-source,
         #section-honors {
           display: none;
+        }
+        #main__section-talks {
+          display: none;
+        }
+        #aside__section-talks {
+          display: block;
         }
       }
     </style>
@@ -231,6 +244,45 @@
               <li>GCP • Heroku • Netlify • Salesforce</li>
               <li>Kubernetes • Terraform • Gatsby</li>
             </ul>
+          </section>
+          <section id="aside__section-talks">
+            <h2>Talks</h2>
+            <table>
+              <tr>
+                <td>
+                  <a
+                    href="https://www.youtube.com/watch?v=XAL8MiDN-O0&list=PLpi1lPB6opQyraZSmwFre_FpL00_3nTzV&index=53"
+                    >Agile schema evolution</a
+                  >
+                  <small>GraphQL Summit</small>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a
+                    href="https://www.youtube.com/watch?v=28si95VO4Ws&list=PLpi1lPB6opQznIY72BAmWtGm50D-WkYxv&index=3"
+                    >Apollo Graph Manager</a
+                  >
+                  <small>Apollo Day</small>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="https://www.youtube.com/watch?v=Zh78npkypas"
+                    >Oclif + Apollo = &lt3</a
+                  >
+                  <small>Oclif Conf</small>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="https://www.meetup.com/es/jsmeetup/events/248783524/"
+                    >GraphQL at the edge</a
+                  >
+                  <small>SFJS Meetup</small>
+                </td>
+              </tr>
+            </table>
           </section>
           <section>
             <h2>Links</h2>
