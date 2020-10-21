@@ -169,7 +169,9 @@
         margin-right: -3px;
         margin-left: 3px;
       }
-      #aside__section-talks {
+
+      #aside__section-talks,
+      #li-phone-number {
         display: none;
       }
 
@@ -182,14 +184,15 @@
           zoom: 80%;
         }
         #section-open-source,
-        #section-honors {
-          display: none;
-        }
+        #section-honors,
         #main__section-talks {
           display: none;
         }
         #aside__section-talks {
           display: block;
+        }
+        #li-phone-number {
+          display: inline;
         }
       }
     </style>
@@ -199,9 +202,15 @@
       <header>
         <h1><em>Evans</em> Hauser</h1>
         <ul>
-          <li>evanshauser@gmail.com</li>
-          <!-- <li>510-325-6404</li> -->
-          <li>SF Bay Area</li>
+          <li>
+            <a href="mailto:evanshauser@gmail.com">evanshauser@gmail.com</a>
+          </li>
+          <li id="li-phone-number">
+            <a href="tel:510-325-6404">510-325-6404</a>
+          </li>
+          <li>
+            <a href="hau.sr">hau.sr</a>
+          </li>
         </ul>
       </header>
 
