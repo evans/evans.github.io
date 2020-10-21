@@ -169,6 +169,16 @@
         margin-right: -3px;
         margin-left: 3px;
       }
+
+      @media print {
+        body {
+          zoom: 75%;
+        }
+        #section-open-source,
+        #section-honors {
+          display: none;
+        }
+      }
     </style>
   </head>
   <body>
@@ -412,7 +422,7 @@
               </summary>
             </section>
           </section>
-          <section>
+          <section id="main__section-talks">
             <h2>Talks</h2>
             <table>
               <tr>
@@ -455,7 +465,7 @@
               </tr>
             </table>
           </section>
-          <section>
+          <section id="section-open-source">
             <h2>Open-Source</h2>
             <section>
               <h3>
@@ -496,7 +506,7 @@
               </ul>
             </section>
           </section>
-          <section>
+          <section id="section-honors">
             <h2>Honors</h2>
             <table>
               <tr>
