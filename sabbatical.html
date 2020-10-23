@@ -16,7 +16,13 @@
       body {
         padding-left: 1em;
         padding-right: 1em;
+        max-width: 35em;
+
+        margin: 1em auto;
+        font-family: "Roboto", sans-serif;
+        font-weight: 100;
       }
+
       body,
       a {
         color: #222;
@@ -27,19 +33,62 @@
         font-weight: 300;
       }
 
+      #back {
+        position: absolute;
+      }
+
       header {
         width: 30em;
         margin: 0 auto;
         text-align: center;
 
         border-bottom: solid 2px #ddd;
+        padding-bottom: 2em;
         margin-bottom: 2em;
       }
+
+      h1 {
+        /* font-size: 4em; */
+        font-weight: 100;
+        margin-bottom: 0;
+      }
+
+      h2 {
+        /* text-transform: uppercase; */
+        font-weight: 100;
+        font-size: 1.8em;
+        color: #888;
+        margin: 0;
+      }
+
+      h3 {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 600;
+        font-size: 1.5em;
+        color: #333;
+        margin: 0;
+      }
+
+      p {
+        line-height: 1.5;
+      }
+
       #drawing-showcase {
         display: flex;
+        /* width: 100vw; */
+        /* position: relative;
+        left: 0;
+        right: 0; */
+      }
+      #drawing-showcase section {
+        margin: 0 2em;
+      }
+      #image-grid {
+        /* display: grid; */
       }
       img {
         width: 300px;
+        /* border-radius: 25px; */
       }
     </style>
   </head>
@@ -64,17 +113,21 @@
       <div id="drawing-showcase">
         <section>
           <h3>Early</h3>
-          <img src="drawings/2020-10-22-0001.jpg" />
-          <img src="drawings/2020-08-14-0012.jpg" />
-          <img src="drawings/2020-07-20-0003 e.jpg" />
-          <img src="drawings/2020-08-28-0042.jpg" />
+          <div id="image-grid">
+            <img src="drawings/2020-10-22-0001.jpg" />
+            <img src="drawings/2020-08-14-0012.jpg" />
+            <img src="drawings/2020-07-20-0003 e.jpg" />
+            <img src="drawings/2020-08-28-0042.jpg" />
+          </div>
         </section>
         <section>
           <h3>Recent</h3>
-          <img src="drawings/2020-09-22-0042.jpg" />
-          <img src="drawings/2020-09-22-0006 labelled.jpg" />
-          <img src="drawings/2020-08-14-0031.jpg" />
-          <img src="drawings/2020-08-28-0054.jpg" />
+          <div id="image-grid">
+            <img src="drawings/2020-09-22-0042.jpg" />
+            <img src="drawings/2020-09-22-0006 labelled.jpg" />
+            <img src="drawings/2020-08-14-0031.jpg" />
+            <img src="drawings/2020-08-28-0054.jpg" />
+          </div>
         </section>
       </div>
     </section>
