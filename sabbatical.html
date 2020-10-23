@@ -1,6 +1,9 @@
 <html>
   <head>
     <style>
+      #drawings {
+        display: flex;
+      }
       img {
         width: 300px;
       }
@@ -9,12 +12,22 @@
   <body>
     <a href="/">⬅ Go back</a>
     <h1>Sabbatical</h1>
-    <h2>Drawings</h2>
-    <img src="drawings/2020-07-20-0003 e.jpg" />
-    <img src="drawings/2020-08-14-0031.jpg" />
-    <img src="drawings/2020-08-28-0054.jpg" />
-    <img src="drawings/2020-09-22-0006 labelled.jpg" />
-    <img src="drawings/2020-09-22-0042.jpg" />
+    <div id="drawings">
+      <section>
+        <h2>Early Drawings</h2>
+        <img src="drawings/2020-10-22-0002.jpg" />
+        <img src="drawings/2020-07-20-0003 e.jpg" />
+        <img src="drawings/2020-08-14-0012.jpg" />
+        <img src="drawings/2020-08-28-0042.jpg" />
+      </section>
+      <section>
+        <h2>Recent Drawings</h2>
+        <img src="drawings/2020-08-14-0031.jpg" />
+        <img src="drawings/2020-08-28-0054.jpg" />
+        <img src="drawings/2020-09-22-0006 labelled.jpg" />
+        <img src="drawings/2020-09-22-0042.jpg" />
+      </section>
+    </div>
     <h2>Books</h2>
     <ul>
       <li>Design of Everyday Things</li>
