@@ -27,6 +27,7 @@
         padding-left: 1em;
         padding-right: 1em;
         max-width: 35em;
+        min-width: 600px;
 
         margin: 1em auto;
         font-family: "Roboto", sans-serif;
@@ -84,13 +85,20 @@
         line-height: 1.5;
       }
 
-      #drawing-showcase {
-        display: flex;
-        width: 80vw;
-        position: relative;
-        left: calc(-40vw + 50%);
-        justify-content: center;
+      @media screen and (min-width: 900px) {
+        #drawing-showcase {
+          display: flex;
+          width: 80vw;
+          position: relative;
+          left: calc(-40vw + 50%);
+        }
       }
+
+      #drawing-showcase {
+        justify-content: center;
+        margin-bottom: 1em;
+      }
+
       #drawing-showcase section {
         margin: 0 2em;
       }
@@ -102,7 +110,9 @@
         grid-template-columns: 1fr 1fr;
       }
       img {
-        width: 150px;
+        width: 200px;
+        height: 259px;
+        overflow: hidden;
         border-radius: 25px;
       }
     </style>
@@ -119,7 +129,7 @@
       and started <a href="#drawings">drawing as a hobby</a> after
       <a
         href="https://www.karenx.com/blog/how-to-become-a-designer-without-going-to-design-school/"
-        >looking into being a designer</a
+        >looking into becoming a designer</a
       >. Scroll on if you'd like more details.
     </p>
     <section id="drawings">
