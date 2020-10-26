@@ -22,6 +22,47 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans:400,600"
       rel="stylesheet"
     />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script defer type="text/javascript">
+      // https://stackoverflow.com/questions/18545077/image-fullscreen-on-click
+      $(document).ready(() => {
+        $("img.enlargeable").click(function () {
+          const src = $(this).attr("src");
+          const modal = $("<div>")
+            .css({
+              background:
+                "RGBA(0,0,0,.8) url(" +
+                encodeURIComponent(src) +
+                ") no-repeat center",
+              backgroundSize: "auto",
+              width: "100%",
+              height: "100%",
+              position: "fixed",
+              zIndex: "10000",
+              top: "0",
+              left: "0",
+              cursor: "pointer",
+            })
+            .click(function () {
+              removeModal();
+            })
+            .appendTo("body");
+          function removeModal() {
+            modal.remove();
+            $("body").off("keyup.modal-close");
+          }
+          //handling ESC
+          $("body").on("keyup.modal-close", function (e) {
+            if (e.key === "Escape") {
+              removeModal();
+            }
+          });
+        });
+      });
+    </script>
+
     <style>
       body {
         padding-left: 1em;
@@ -100,20 +141,44 @@
       }
 
       #drawing-showcase section {
+        display: flex;
+        flex-direction: column;
         margin: 0 2em;
       }
       #drawing-showcase section h4 {
         text-align: center;
       }
       #image-grid {
+        margin: 0 auto;
         display: grid;
         grid-template-columns: 1fr 1fr;
+        gap: 1em;
       }
-      img {
+
+      figure {
+        margin: 0;
         width: 200px;
         height: 259px;
         overflow: hidden;
         border-radius: 25px;
+      }
+
+      figure img {
+        transform: scale(1);
+        transition: 0.3s ease-in-out;
+      }
+
+      figure:hover img {
+        transform: scale(1.3);
+      }
+
+      img {
+        width: 200px;
+        height: 259px;
+      }
+
+      img.enlargeable {
+        cursor: pointer;
       }
     </style>
   </head>
@@ -139,19 +204,38 @@
         <section>
           <h4>Early</h4>
           <div id="image-grid">
-            <img src="drawings/2020-10-22-0001.jpg" />
-            <img src="drawings/2020-08-14-0012.jpg" />
-            <img src="drawings/2020-07-20-0003 e.jpg" />
-            <img src="drawings/2020-08-28-0042.jpg" />
+            <figure>
+              <img class="enlargeable" src="drawings/2020-10-22-0001.jpg" />
+            </figure>
+            <figure>
+              <img class="enlargeable" src="drawings/2020-08-14-0012.jpg" />
+            </figure>
+            <figure>
+              <img class="enlargeable" src="drawings/2020-07-20-0003 e.jpg" />
+            </figure>
+            <figure>
+              <img class="enlargeable" src="drawings/2020-08-28-0042.jpg" />
+            </figure>
           </div>
         </section>
         <section>
           <h4>Recent</h4>
           <div id="image-grid">
-            <img src="drawings/2020-09-22-0042.jpg" />
-            <img src="drawings/2020-09-22-0006 labelled.jpg" />
-            <img src="drawings/2020-08-14-0031.jpg" />
-            <img src="drawings/2020-08-28-0054.jpg" />
+            <figure>
+              <img class="enlargeable" src="drawings/2020-09-22-0042.jpg" />
+            </figure>
+            <figure>
+              <img
+                class="enlargeable"
+                src="drawings/2020-09-22-0006 labelled.jpg"
+              />
+            </figure>
+            <figure>
+              <img class="enlargeable" src="drawings/2020-08-14-0031.jpg" />
+            </figure>
+            <figure>
+              <img class="enlargeable" src="drawings/2020-08-28-0054.jpg" />
+            </figure>
           </div>
         </section>
       </div>
